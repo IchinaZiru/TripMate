@@ -9,6 +9,8 @@ export function VideoPlayer() {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isFading, setIsFading] = useState(false);
     const [isLoading, setIsLoading] = useState(true); // ロード中のステート
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
     // 再生する動画のリスト
     const videoList = [
@@ -44,8 +46,22 @@ export function VideoPlayer() {
         }
     }, [currentVideoIndex]); // currentVideoIndexが変わるたびに動作
 
+    // ウィンドウのリサイズイベントをハンドリングして動画のサイズを調整
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+            setWindowHeight(window.innerHeight);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
-        <div style={{ position: 'relative', width: '600px', height: 'auto' }}>
+        <div style={{ position: 'relative', width: '100%', height: `${windowHeight}px` }}>
             {/* 動画要素 */}
             <video
                 controls
@@ -53,10 +69,11 @@ export function VideoPlayer() {
                 ref={videoRef}
                 onEnded={handleVideoEnded} // 動画が終了したら次の動画へ
                 onLoadedData={handleLoadedData} // 動画がロードされたら再生
-                width="600"
                 style={{
                     display: 'block',
                     width: '100%',
+                    height: '100%', // 動画の高さをウィンドウにフィット
+                    objectFit: 'cover', // アスペクト比を保ちながらウィンドウに合わせる
                     opacity: isFading ? 0 : 1,
                     transition: 'opacity 1s ease' // フェードエフェクト
                 }} // 動画をボックス内にフィットさせる
