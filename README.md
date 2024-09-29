@@ -8,9 +8,9 @@
 
 ### `npm install react-router-dom`
 
-### `npm install @mui/material @emotion/react @emotion/styled
+### `npm install @mui/material @emotion/react @emotion/styled`
 
-      // ------- コマンド説明 ------- //
+コマンド詳細.....
 
 ### `npm start`
 
