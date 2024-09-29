@@ -10,6 +10,8 @@
 
 ### `npm install @mui/material @emotion/react @emotion/styled`
 
+### `yarn add @mui/icons-material`
+
 コマンド詳細.....
 
 ### `npm start`
