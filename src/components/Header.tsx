@@ -1,26 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../style/Header.css'; // Headerコンポーネントに対応するCSSファイルをインポート
+import React from "react";
+import { Link } from "react-router-dom";
+import '../style/Header.css';
 
-const Header: React.FC = () => {
+const Header = () => {
     return (
-        <header className="header">
-            <Link to="/" className="logo">
-                My Restaurant
-            </Link>
+        <header>
+            <div className="logo">
+                <h3>Trip Mate へようこそ！！</h3>
+            </div>
+
             <nav>
-                <ul className="nav-links">
-                    <li>
-                        <Link to="/">Home</Link>
+                <ul>
+                    <li className="first">
+                        <Link to="/">ホーム</Link>
                     </li>
                     <li>
-                        <Link to="/menu">Menu</Link>
+                        <Link to="/loginform">Account</Link>
                     </li>
                     <li>
-                        <Link to="/locations">Locations</Link>
+                        <Link to="/contact">お問い合わせ</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/search">Search</Link>
                     </li>
                 </ul>
             </nav>

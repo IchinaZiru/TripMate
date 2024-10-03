@@ -1,10 +1,15 @@
+import React from "react";
+import InitialTransition from "../utils/InitialTransition";
+import { motion } from 'framer-motion'
 
 const Search = () => {
     return (
-      <div>
-        <h1>Works</h1>
-      </div>
-    );
-  };
-  
-  export default Search;
+        <InitialTransition>
+            <div className="container">
+                <p>Hello</p>
+            </div>
+        </InitialTransition>
+    )
+};
+
+export default Search;

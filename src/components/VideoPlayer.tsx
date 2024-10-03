@@ -114,11 +114,7 @@ export function VideoPlayer() {
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // 文字の影で視認性向上
                 }}
             >
-<<<<<<< HEAD
                 test
-=======
-                Test
->>>>>>> main
             </div>
         </div>
     );
