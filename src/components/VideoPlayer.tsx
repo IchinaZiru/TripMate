@@ -64,7 +64,6 @@ export function VideoPlayer() {
         <div style={{ position: 'relative', width: '100%', height: `${windowHeight}px` }}>
             {/* 動画要素 */}
             <video
-                controls
                 muted
                 ref={videoRef}
                 onEnded={handleVideoEnded} // 動画が終了したら次の動画へ
