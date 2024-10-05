@@ -13,6 +13,8 @@ import Search from './Pages/Search'
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import LoginForm from './Pages/LoginForm';
+import Testdb from './Pages/Testbd';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route path="/loginform" element={<LoginForm />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/testdb" element={<Testdb />} />
       </Routes>
     </AnimatePresence>
   );

@@ -23,6 +23,9 @@ const Header = () => {
                     <li>
                         <Link to="/search">Search</Link>
                     </li>
+                    <li>
+                        <Link to="/testdb">DB</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

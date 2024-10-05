@@ -10,7 +10,11 @@
     "@types/node": "^16.18.111",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
     "framer-motion": "^11.9.0",
+    "mysql2": "^3.11.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2",
@@ -44,5 +48,10 @@
   },
   "devDependencies": {
     "vite-tsconfig-paths": "^5.0.1"
-  }
+  },
+  "description": "## Available Scripts",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

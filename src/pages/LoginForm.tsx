@@ -9,11 +9,6 @@ const LoginForm = () => {
     const [formErrors, setFormErrors] = useState<FormErrors>({});
     const [isSubmit, setIsSubmit] = useState(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormValues({ ...formValues, [name]: value });
-    };
-
     type FormValues = {
         username: string;
         mailAddress: string;
@@ -24,6 +19,11 @@ const LoginForm = () => {
         username?: string;
         mailAddress?: string;
         password?: string;
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormValues({ ...formValues, [name]: value });
     };
 
     //!              バリデーションチェック              !\\
