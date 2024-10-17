@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import InitialTransition from "../utils/InitialTransition";
-import '../style/LoginForm.css';
+import '../style/LoginForm.modules.css';
 
 const LoginForm = () => {
 
