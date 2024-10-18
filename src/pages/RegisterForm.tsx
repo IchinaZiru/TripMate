@@ -3,7 +3,7 @@ import InitialTransition from "../utils/InitialTransition";
 import '../style/LoginForm.css';
 import { Link } from "react-router-dom";
 
-const LoginForm = () => {
+const RegisterForm = () => {
 
     const initialValues = { username: "", mailAddress: "", password: "" };
     const [formValues, setFormValues] = useState(initialValues);
@@ -108,14 +108,9 @@ const LoginForm = () => {
                         {/* ログイン識別 */}
                         {Object.keys(formErrors).length === 0 && isSubmit && (
                             <div className="msgOk">
-                                ログインに成功しました
+                                アカウント登録に成功しました
                             </div>
                         )}
-                        {/* 新規登録へのリンク */}
-                        <div className="registerLink">
-                            <p>アカウントをお持ちでないですか？</p>
-                            <Link to="/registerform">新規登録はこちら</Link>
-                        </div>
                     </div>
                 </form>
 
@@ -124,4 +119,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default RegisterForm;

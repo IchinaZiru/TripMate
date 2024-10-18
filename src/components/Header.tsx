@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../style/Header.css';
+import "../style/Header.css";
 
 const Header = () => {
     return (
@@ -18,10 +18,13 @@ const Header = () => {
                         <Link to="/loginform">Account</Link>
                     </li>
                     <li>
-                        <Link to="/contact">お問い合わせ</Link>
+                        <Link to="/registerform">Account</Link>
                     </li>
                     <li>
                         <Link to="/search">Search</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">お問い合わせ</Link>
                     </li>
                     <li>
                         <Link to="/testdb">DB</Link>

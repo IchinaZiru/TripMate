@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import SearchForm from '../components/SearchForm';
 import SearchResults from '../components/SearchResults';
-import '../style/Search.css';
+import InitialTransition from "../utils/InitialTransition";
+
 
 interface SearchCriteria {
     prefecture: string;
@@ -29,11 +30,13 @@ const Search: React.FC = () => {
     };
 
     return (
-        <div>
-            <h1>旅行先検索</h1>
-            <SearchForm onSearch={handleSearch} />
-            <SearchResults results={results} />
-        </div>
+        <InitialTransition>
+            <div style={{ paddingTop: '90px' }}>
+                <h1>旅行先検索</h1>
+                <SearchForm onSearch={handleSearch} />
+                <SearchResults results={results} />
+            </div>
+        </InitialTransition>
     );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import '../style/SearchForm.css';  // CSSを読み込み
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
+import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import SearchIcon from '@mui/icons-material/Search';
 import Stack from '@mui/material/Stack';
 
@@ -85,8 +85,8 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                 />
             </div>
             <Stack direction="row" spacing={2}>
-                <Button variant="outlined" startIcon={<DeleteIcon />}>
-                    Delete
+                <Button variant="outlined" startIcon={<PsychologyAltIcon />}>
+                    AIにおまかせ
                 </Button>
                 <Button variant="contained" type="submit" endIcon={<SearchIcon />}>
                     検索
