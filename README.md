@@ -11,7 +11,6 @@
   <img src="https://img.shields.io/badge/-Express.js-000000.svg?logo=Express&style=for-the-badge">
   <img src="https://img.shields.io/badge/-TailwindCSS-000000.svg?logo=tailwindcss&style=for-the-badge">
   <img src="https://img.shields.io/badge/-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-  
     <!-- フロントエンドの言語一覧 -->
   <img src="https://img.shields.io/badge/-TypeScript-65ADF1.svg?logo=typescript&style=for-the-badge">
     <img src="https://img.shields.io/badge/-JavaScript-fffacd.svg?logo=javascript&style=for-the-badge">
@@ -83,6 +82,8 @@ TripMate
 | Gunicorn              | x.x.x      |
 | Docker                | 27.1.1     |
 | Node.js               | 22.9.0     |
+| Next.js               | xx.x.x     |
+| Express.js            | xx.x.x     |
 | React                 | 18.3.1     |
 | TypeScript            | 4.9.5      |
 
