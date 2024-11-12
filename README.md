@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
     <!-- フロントエンドの言語一覧 -->
   <img src="https://img.shields.io/badge/-TypeScript-65ADF1.svg?logo=typescript&style=for-the-badge">
-    <img src="https://img.shields.io/badge/-JavaScript-fffacd.svg?logo=javascript&style=for-the-badge">
+    <img src="https://img.shields.io/badge/-JavaScript-ffff00.svg?logo=javascript&style=for-the-badge">
   
   <!-- バックエンドのフレームワーク一覧 -->
   <img src="https://img.shields.io/badge/-Django-092E20.svg?logo=django&style=for-the-badge">
