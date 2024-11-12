@@ -198,7 +198,7 @@ http://xxx.x.x.x:xxxx にアクセスできるか確認
 
 ### コンテナの停止
 
-# docker-compose down
+> docker-compose down
 
 以下のコマンドでコンテナを停止することができます
 
