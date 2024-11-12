@@ -6,27 +6,32 @@
 <!-- 該当するプロジェクトの中から任意のものを選ぶ-->
 <p style="display: inline">
   <!-- フロントエンドのフレームワーク一覧 -->
-  <img src="https://img.shields.io/badge/-Node.js-000000.svg?logo=node.js&style=for-the-badge">
-  <img src="https://img.shields.io/badge/-Next.js-000000.svg?logo=next.js&style=for-the-badge">
-  <img src="https://img.shields.io/badge/-Express.js-000000.svg?logo=Express&style=for-the-badge">
-  <img src="https://img.shields.io/badge/-TailwindCSS-000000.svg?logo=tailwindcss&style=for-the-badge">
-  <img src="https://img.shields.io/badge/-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+  <img src="https://img.shields.io/badge/-Node.js-000000.svg?logo=node.js&style=plastic">
+  <img src="https://img.shields.io/badge/-Next.js-000000.svg?logo=next.js&style=plastic">
+  <img src="https://img.shields.io/badge/-Express.js-000000.svg?logo=Express&style=plastic">
+  <img src="https://img.shields.io/badge/-TailwindCSS-000000.svg?logo=tailwindcss&style=plastic">
+  <img src="https://img.shields.io/badge/-React-20232A?style=plastic&logo=react&logoColor=61DAFB">
+  <img src="https://img.shields.io/badge/-Npm-CB3837.svg?logo=npm&style=plastic">
     <!-- フロントエンドの言語一覧 -->
-  <img src="https://img.shields.io/badge/-TypeScript-65ADF1.svg?logo=typescript&style=for-the-badge">
-    <img src="https://img.shields.io/badge/-JavaScript-ffff00.svg?logo=javascript&style=for-the-badge">
+  <img src="https://img.shields.io/badge/-TypeScript-65ADF1.svg?logo=typescript&style=plastic">
+  <img src="https://img.shields.io/badge/-Javascript-F7DF1E.svg?logo=javascript&style=plastic">
   
   <!-- バックエンドのフレームワーク一覧 -->
-  <img src="https://img.shields.io/badge/-Django-092E20.svg?logo=django&style=for-the-badge">
+  <img src="https://img.shields.io/badge/-Django-092E20.svg?logo=django&style=plastic">
+  <img src="https://img.shields.io/badge/-Flask-000000.svg?logo=flask&style=plastic">
 
   <!-- バックエンドの言語一覧 -->
-  <img src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
+  <img src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=plastic">
   <!-- ミドルウェア一覧 -->
-  <img src="https://img.shields.io/badge/-Nginx-269539.svg?logo=nginx&style=for-the-badge">
-  <img src="https://img.shields.io/badge/-MySQL-4479A1.svg?logo=mysql&style=for-the-badge&logoColor=white">
-  <img src="https://img.shields.io/badge/-PostgreSQL-4169E1.svg?logo=postgresql&style=for-the-badge&logoColor=white">
-  <img src="https://img.shields.io/badge/-Gunicorn-199848.svg?logo=gunicorn&style=for-the-badge&logoColor=white">
+  <img src="https://img.shields.io/badge/-Nginx-269539.svg?logo=nginx&style=plastic">
+  <img src="https://img.shields.io/badge/-MySQL-4479A1.svg?logo=mysql&style=plastic&logoColor=white">
+  <img src="https://img.shields.io/badge/-PostgreSQL-4169E1.svg?logo=postgresql&style=plastic&logoColor=white">
+  <img src="https://img.shields.io/badge/-Firebase-FFCA28.svg?logo=firebase&style=plastic">
+  <img src="https://img.shields.io/badge/-Gunicorn-199848.svg?logo=gunicorn&style=plastic&logoColor=white">
   <!-- インフラ一覧 -->
-  <img src="https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=for-the-badge">
+  <img src="https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=plastic">
+  <!-- デザイン一覧 -->
+  <img src="https://img.shields.io/badge/-Figma-F24E1E.svg?logo=figma&style=plastic">
 </p>
 
 ## 目次
@@ -182,27 +187,18 @@ TripMate
 
 .env ファイルを以下の環境変数例と[環境変数の一覧](#環境変数の一覧)を元に作成
 
-.env
-MYSQL_ROOT_PASSWORD=root
-MYSQL_DATABASE=django-db
-MYSQL_USER=django
-MYSQL_PASSWORD=django
-MYSQL_HOST=db
-MYSQL_PORT=3306
-SECRET_KEY=django
-DJANGO_SETTINGS_MODULE=project.settings.local
-
-
 .env ファイルを作成後、以下のコマンドで開発環境を構築
 
 make prepare
 
 ### 動作確認
 
-http://127.0.0.1:8000 にアクセスできるか確認
+http://xxx.x.x.x:xxxx にアクセスできるか確認
 アクセスできたら成功
 
 ### コンテナの停止
+
+# docker-compose down
 
 以下のコマンドでコンテナを停止することができます
 
@@ -219,7 +215,7 @@ make down
 | MYSQL_HOST             | MySQL のホスト名（Docker で使用）         | db                                 |                                          |
 | MYSQL_PORT             | MySQL のポート番号（Docker で使用）       | 3306                               |                                          |
 | SECRET_KEY             | Django のシークレットキー                 | secretkey                          | 他者に推測されないランダムな値にすること |
-| ALLOWED_HOSTS          | リクエストを許可するホスト名              | localhost 127.0.0.1 [::1] back web | フロントのホスト名                       |
+| ALLOWED_HOSTS          | リクエストを許可するホスト名              | localhost 127.0.0.1 [::1] back web | http://localhost:3000/                    |
 | DEBUG                  | デバッグモードの切り替え                  | True                               | False                                    |
 | TRUSTED_ORIGINS        | CORS で許可するオリジン                   | http://localhost                   |                                          |
 | DJANGO_SETTINGS_MODULE | Django アプリケーションの設定モジュール   | project.settings.local             | project.settings.dev                     |
