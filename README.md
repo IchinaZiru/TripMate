@@ -23,6 +23,7 @@
   <!-- ミドルウェア一覧 -->
   <img src="https://img.shields.io/badge/-Nginx-269539.svg?logo=nginx&style=for-the-badge">
   <img src="https://img.shields.io/badge/-MySQL-4479A1.svg?logo=mysql&style=for-the-badge&logoColor=white">
+  <img src="https://img.shields.io/badge/-PostgreSQL-4169E1.svg?logo=postgresql&style=for-the-badge&logoColor=white">
   <img src="https://img.shields.io/badge/-Gunicorn-199848.svg?logo=gunicorn&style=for-the-badge&logoColor=white">
   <!-- インフラ一覧 -->
   <img src="https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=for-the-badge">
@@ -69,9 +70,10 @@ TripMate
 | 言語・フレームワーク  | バージョン |
 | --------------------- | ---------- |
 | Django                | x.x.x      |
-| Python                | x.x.x      |
+| Python                | 3.11.5     |
 | Nginx                 | x.x.x      |
 | MySQL                 | x.x.x      |
+| PostgreSQL            | x.x.x      |
 | Gunicorn              | x.x.x      |
 | Docker                | 27.1.1     |
 | Node.js               | 22.9.0     |
