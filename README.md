@@ -1,7 +1,5 @@
 ##  TRIP MATE
-![TripMate](https://github.com/user-attachments/assets/cd4df823-08a3-4327-9d71-7a35529ab647)
-
-
+![TripMateBunner](https://github.com/user-attachments/assets/1c7bb5af-fee0-4309-8a65-78004fb0502f)
 
 <div id="top"></div>
 
