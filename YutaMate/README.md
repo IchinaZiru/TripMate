@@ -36,5 +36,7 @@ YutaMate
 　` docker-compose down　       ( /YutaMait/ )`
 　` docker-compose up --build　 ( /YutaMait/ )` 
 
-
+3.pip install
+・pandas
+・scikit-learn
 
