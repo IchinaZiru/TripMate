@@ -193,7 +193,8 @@ make prepare
 
 ### 動作確認
 
-http://xxx.x.x.x:xxxx にアクセスできるか確認
+> http://xxx.x.x.x:xxxx にアクセスできるか確認
+
 アクセスできたら成功
 
 ### コンテナの停止
