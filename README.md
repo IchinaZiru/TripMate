@@ -1,5 +1,5 @@
-## ■ TRIP MATE
-![TripMate](https://github.com/user-attachments/assets/7008003b-32d1-426c-8f36-829c34498570)
+##  TRIP MATE
+![TripMate](https://github.com/user-attachments/assets/cd4df823-08a3-4327-9d71-7a35529ab647)
 
 
 
