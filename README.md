@@ -1,5 +1,6 @@
 ## ■ TRIP MATE
-![ogp]()
+![TripMate](https://github.com/user-attachments/assets/7008003b-32d1-426c-8f36-829c34498570)
+
 
 
 <div id="top"></div>
