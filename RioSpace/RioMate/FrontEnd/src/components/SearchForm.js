@@ -1,6 +1,6 @@
 // SearchForm.js
 import React, { useState } from 'react';
-import './SearchForm.css';
+import '../styles/SearchForm.css';
 
 const SearchForm = ({ onSearch }) => {
   const [departureDate, setDepartureDate] = useState('');

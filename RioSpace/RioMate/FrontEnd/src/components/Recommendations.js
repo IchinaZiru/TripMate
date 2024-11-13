@@ -1,6 +1,6 @@
 // Recommendations.js
 import React, { useState } from 'react';
-import './Recommendations.css';
+import '../styles/Recommendations.css';
 
 const Recommendations = ({ recommendations }) => {
   const [visibleCount, setVisibleCount] = useState(10);
