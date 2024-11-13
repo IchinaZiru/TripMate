@@ -219,7 +219,7 @@ make down
 | MYSQL_HOST             | MySQL のホスト名（Docker で使用）         | db                                 |                                          |
 | MYSQL_PORT             | MySQL のポート番号（Docker で使用）       | 3306                               |                                          |
 | SECRET_KEY             | Django のシークレットキー                 | secretkey                          | 他者に推測されないランダムな値にすること |
-| ALLOWED_HOSTS          | リクエストを許可するホスト名              | localhost 127.0.0.1 [::1] back web | http://localhost:3000/                    |
+| ALLOWED_HOSTS          | リクエストを許可するホスト名              | localhost 127.0.0.1 [::1] back web | http://172.23.0.2:3001                    |
 | DEBUG                  | デバッグモードの切り替え                  | True                               | False                                    |
 | TRUSTED_ORIGINS        | CORS で許可するオリジン                   | http://localhost                   |                                          |
 | DJANGO_SETTINGS_MODULE | Django アプリケーションの設定モジュール   | project.settings.local             | project.settings.dev                     |
