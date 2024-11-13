@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+janome
+rank-bm25
+scikit-learn
+pandas
+pydantic
