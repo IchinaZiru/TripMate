@@ -14,4 +14,4 @@ services:
       context: ./frontend
     container_name: frontend
     ports:
-      - "3500:3000"  # ホストの3500番ポートをコンテナの3000番ポートにマッピング
+      - "3100:3000"  # ホストの3500番ポートをコンテナの3000番ポートにマッピング
