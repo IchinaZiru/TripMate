@@ -1,0 +1,13 @@
+/* App.css */
+.app-container {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    padding: 20px;
+    background-color: #e9ecef;
+    min-height: 100vh;
+  }
+  
+  .app-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
