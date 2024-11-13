@@ -1,0 +1,9 @@
+{
+	"name": "React",
+	"dockerComposeFile": "../../docker-compose.yml",
+	"service": "frontend",
+	"workspaceFolder": "/workspace",
+  "build": {
+    "options": ["--no-cache"]
+  }
+}
