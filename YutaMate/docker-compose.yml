@@ -5,10 +5,10 @@ services:
     build:
       context: ./backend
     ports:
-      - "8300:8300"
+      - "8300:8000"
 
   frontend:
     build:
       context: ./frontend
     ports:
-      - "3300:3300"  # ホストの3300番ポートをコンテナの3000番ポートにマッピング
+      - "3300:3000"  # ホストの3300番ポートをコンテナの3000番ポートにマッピング

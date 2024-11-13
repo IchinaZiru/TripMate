@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # ポート3000をコンテナで公開
-EXPOSE 3300
+EXPOSE 3000
 
 # アプリケーションの起動
 CMD ["npm", "start"]
