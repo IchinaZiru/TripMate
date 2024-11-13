@@ -1,0 +1,69 @@
+:root {
+    --black-color: #010000;
+    --white-color: #ffffff;
+    --lightgray-color: #e6e6e6;
+}
+
+.App {
+    font-size: 18px;
+    height: 100vh;
+    width: 100%;
+    /* font-weight: 400; */
+    /* font-style: normal; */
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: black;
+    color: white;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo h3 a {
+    color: white; /* ロゴのリンクの文字色 */
+    text-decoration: none; /* 下線を消す */
+    transition: all 0.2s;
+}
+
+/* ホバー時の色変更 */
+.logo h3 a:hover {
+    color: #48b4af;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    font-size: 19px;
+    text-decoration: none;
+    color: var(--white-color);
+    transition: all 0.2s;
+}
+
+nav ul li a:hover {
+    color: #48b4af;
+}
+
+.container {
+    height: 100vh;
+    padding: 120px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 50px;
+}
