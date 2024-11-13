@@ -1,13 +1,14 @@
 ## 最初に実行すること!!
-`  /TripMate/Main/
+`  /TripMate/Main/  `
 `  $ npm install  axios @mui/material @emotion/react @emotion/styled  `
 `  $ yarn add @mui/icons-material  `
 
 
 ## 仮想環境の作成
-python3 -m venv venv
-pip install --no-cache-dir -r requirements.txt
-pip install uvicorn
+`  /TripMate/Main/backend   `
+`  python3 -m venv venv  `
+`  pip install --no-cache-dir -r requirements.txt  `
+`  pip install uvicorn  `
 
 
 ## 仮想環境の立ち上げ
