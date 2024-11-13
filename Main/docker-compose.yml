@@ -1,14 +1,17 @@
+#TripMate >> docker-compose
 version: '3'
 
 services:
   backend:
     build:
       context: ./backend
+    container_name: backend
     ports:
       - "8000:8000"
 
   frontend:
     build:
       context: ./frontend
+    container_name: frontend
     ports:
       - "3500:3000"  # ホストの3500番ポートをコンテナの3000番ポートにマッピング
