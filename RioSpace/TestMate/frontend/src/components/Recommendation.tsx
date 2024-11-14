@@ -1,29 +1,31 @@
-// Recommendations.js
 import React, { useState } from 'react';
 import './Recommendations.css';
 
-const Recommendations = ({ recommendations }) => {
+interface RecommendationProps {
+  recommendations: {
+    画像_URL?: string;
+    名称: string;
+    住所?: string;
+    費用?: number;
+    所要時間?: number;
+    おすすめな人?: string;
+    ジャンル_表示?: string;
+    詳細URL?: string;
+  }[];
+}
+
+const Recommendations: React.FC<RecommendationProps> = ({ recommendations }) => {
   const [visibleCount, setVisibleCount] = useState(10);
 
-  const formatDuration = (hours) => {
-    if (hours == null) {
-      return '情報なし';
-    }
+  const formatDuration = (hours?: number) => {
+    if (hours == null) return '情報なし';
     const totalMinutes = Math.round(hours * 60);
     const h = Math.floor(totalMinutes / 60);
     const m = totalMinutes % 60;
-    if (h > 0 && m > 0) {
-      return `${h}時間${m}分`;
-    } else if (h > 0) {
-      return `${h}時間`;
-    } else {
-      return `${m}分`;
-    }
+    return h > 0 && m > 0 ? `${h}時間${m}分` : h > 0 ? `${h}時間` : `${m}分`;
   };
 
-  const handleShowMore = () => {
-    setVisibleCount(visibleCount + 10);
-  };
+  const handleShowMore = () => setVisibleCount(visibleCount + 10);
 
   return (
     <div className="recommendations-container">
@@ -39,8 +41,8 @@ const Recommendations = ({ recommendations }) => {
                   <p><strong>住所:</strong> {item.住所}</p>
                   <p><strong>費用:</strong> {item.費用 ? `${item.費用}円` : '情報なし'}</p>
                   <p><strong>所要時間:</strong> {formatDuration(item.所要時間)}</p>
-                  <p><strong>おすすめな人:</strong> {item.おすすめな人 ? item.おすすめな人 : '情報なし'}</p>
-                  <p><strong>ジャンル:</strong> {item.ジャンル_表示 ? item.ジャンル_表示 : '情報なし'}</p>
+                  <p><strong>おすすめな人:</strong> {item.おすすめな人 ?? '情報なし'}</p>
+                  <p><strong>ジャンル:</strong> {item.ジャンル_表示 ?? '情報なし'}</p>
                 </div>
                 <a href={item.詳細URL} target="_blank" rel="noopener noreferrer" className="detail-button">詳細を見る</a>
               </li>

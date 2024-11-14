@@ -1,14 +1,13 @@
-// App.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import SearchForm from './SearchForm';
-import Recommendations from './Recommendations';
+import SearchForm from './components/SearchForm';
+import Recommendations from './components/Recommendation';
 import './App.css';
 
-const App = () => {
+const App: React.FC = () => {
   const [recommendations, setRecommendations] = useState([]);
 
-  const handleSearch = async (searchParams) => {
+  const handleSearch = async (searchParams: any) => {
     try {
       const response = await axios.post('/api/recommendations', searchParams);
       setRecommendations(response.data);
