@@ -17,6 +17,7 @@
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "framer-motion": "^11.9.0",
