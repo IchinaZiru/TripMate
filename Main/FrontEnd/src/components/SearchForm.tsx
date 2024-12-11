@@ -1,8 +1,9 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import Select, { MultiValue, ActionMeta } from 'react-select'
-//CSS
+import Select, { MultiValue, ActionMeta } from 'react-select';
+import axios from 'axios'; // axiosをインポート
+// CSS
 import '../style/SearchForm.css';  // CSSを読み込み
-//MUI
+// MUI
 import Button from '@mui/material/Button';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import SearchIcon from '@mui/icons-material/Search';
@@ -45,7 +46,6 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
         setCriteria({ ...criteria, [name]: value });
     };
 
-    //! ここ重要 !//
     const handleSelectChange = (
         selectedOptions: MultiValue<{ value: string; label: string } | null>,
         actionMeta: ActionMeta<{ value: string; label: string } | null>
@@ -56,9 +56,23 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
         setCriteria({ ...criteria, prefecture: selectedValues });
     };
 
-    const handleSubmit = (e: FormEvent) => {
+    // フォームの送信時にバックエンドにデータを送信
+    const handleSubmit = async (e: FormEvent, actionType: 'ai' | 'search') => {
         e.preventDefault();
-        onSearch(criteria);
+
+        try {
+            const url = actionType === 'ai' ? 'http://localhost:8000/api/ai' : 'http://localhost:8000/api/search'; // 例: AI用と検索用のエンドポイント
+            const response = await axios.post(url, criteria, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            console.log('サーバーからの応答:', response.data);
+            // 送信後の処理（例えば、親コンポーネントに結果を渡す）
+            onSearch(criteria);
+        } catch (error) {
+            console.error('データ送信中にエラーが発生:', error);
+        }
     };
 
     const toggleAdvancedSettings = () => {
@@ -71,9 +85,9 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
         { value: 'Iwate', label: '岩手' },
         { value: 'Akita', label: '秋田' },
         { value: 'Miyagi', label: '宮城' },
-        { value: 'Yamagata', label: '山形' },
+        { value: 'Yamagata', label: '山形' },J
         { value: 'Fukushima', label: '福島' },
-    ]
+    ];
 
     const trans = [
         { value: 'car', label: '車' },
@@ -83,12 +97,10 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
         { value: 'bus', label: 'バス' },
         { value: 'walking', label: '徒歩' },
         { value: 'ship', label: 'フェリー' },
-    ]
-
-    
+    ];
 
     return (
-        <form className="search-form" onSubmit={handleSubmit}>
+        <form className="search-form" onSubmit={(e) => handleSubmit(e, 'search')}>
             <label>都道府県:</label>
             <Select
                 name="prefecture"
@@ -96,7 +108,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                 defaultValue={null}
                 placeholder="都道府県を選択したください。(複数可)"
                 isMulti
-                onChange={handleSelectChange} /*{(value) => { console.log(value) }}*/
+                onChange={handleSelectChange}
                 required
             />
 
@@ -140,7 +152,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
 
             {/* 詳細設定フィールド */}
             {showAdvanced && (
-                <><div className="advanced-settings">
+                <div className="advanced-settings">
                     <div>
                         <label>旅の予算:</label>
                         <input
@@ -159,7 +171,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                             defaultValue={null}
                             placeholder="使用する交通機関を選択したください。(複数可)"
                             isMulti
-                            onChange={handleSelectChange} /*{(value) => { console.log(value) }}*/
+                            onChange={handleSelectChange}
                         />
                     </div>
                     <label>旅行の目的など(テキスト):</label>
@@ -167,14 +179,22 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                         type="textarea"
                         name="purpose"
                         onChange={handleChange} />
-                </div></>
+                </div>
             )}
 
             <Stack direction="row" spacing={2}>
-                <Button variant="outlined" type="submit" startIcon={<PsychologyAltIcon />}>
+                <Button 
+                    variant="outlined" 
+                    type="submit" 
+                    startIcon={<PsychologyAltIcon />} 
+                    onClick={(e) => handleSubmit(e, 'ai')}>
                     AIにおまかせ
                 </Button>
-                <Button variant="contained" type="submit" endIcon={<SearchIcon />}>
+                <Button 
+                    variant="contained" 
+                    type="submit" 
+                    endIcon={<SearchIcon />} 
+                    onClick={(e) => handleSubmit(e, 'search')}>
                     プラン検討
                 </Button>
             </Stack>
