@@ -65,7 +65,7 @@ TripMate
   <p align="left">
     <br />
     <!-- プロジェクト詳細にBacklogのWikiのリンク -->
-    <a href="https://yutatravel.com/"><strong>プロジェクト詳細 »</strong></a>
+    <a href="https://tripmatefun.com/"><strong>プロジェクト詳細 »</strong></a>
     <br />
     <br />
 
